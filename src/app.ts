@@ -1,6 +1,6 @@
 import express from "express";
 import { ApolloServer, gql } from "apollo-server-express";
-
+import { buildSchema } from "graphql";
 import users from "./user";
 
 async function main(): Promise<void> {

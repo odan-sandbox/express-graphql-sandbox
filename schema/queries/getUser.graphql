@@ -4,3 +4,8 @@ query getUser {
     name
   }
 }
+query getUserId {
+  user {
+    id
+  }
+}

@@ -6,23 +6,9 @@ import users from "./user";
 async function main(): Promise<void> {
   const app = express();
 
-  const typeDefs = gql`
-    type User {
-      id: Int
-      name: String
-      age: Int
-      created_date: String
-    }
-    type Query {
-      users: [User]
-    }
-  `;
+  const typeDefs = gql``;
 
-  const resolvers = {
-    Query: {
-      users: () => users
-    }
-  };
+  const resolvers = {};
 
   const server = new ApolloServer({ typeDefs, resolvers });
   server.applyMiddleware({ app });
